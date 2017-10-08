@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E85FAE11F8A6ED100B03AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FAE01F8A6ED100B03AE1 /* AppDelegate.swift */; };
-		6E85FAE31F8A6ED100B03AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FAE21F8A6ED100B03AE1 /* ViewController.swift */; };
-		6E85FAE61F8A6ED100B03AE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FAE41F8A6ED100B03AE1 /* Main.storyboard */; };
-		6E85FAE91F8A6ED100B03AE1 /* MarketAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FAE71F8A6ED100B03AE1 /* MarketAPP.xcdatamodeld */; };
-		6E85FAEB1F8A6ED100B03AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FAEA1F8A6ED100B03AE1 /* Assets.xcassets */; };
-		6E85FAEE1F8A6ED100B03AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FAEC1F8A6ED100B03AE1 /* LaunchScreen.storyboard */; };
 		6E85FAF91F8A6ED200B03AE1 /* MarketAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FAF81F8A6ED200B03AE1 /* MarketAPPTests.swift */; };
 		6E85FB041F8A6ED200B03AE1 /* MarketAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB031F8A6ED200B03AE1 /* MarketAPPUITests.swift */; };
+		6E85FB191F8A72D500B03AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB181F8A72D500B03AE1 /* Assets.xcassets */; };
+		6E85FB1F1F8A72ED00B03AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB1B1F8A72ED00B03AE1 /* AppDelegate.swift */; };
+		6E85FB201F8A72ED00B03AE1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB1C1F8A72ED00B03AE1 /* Info.plist */; };
+		6E85FB211F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB1D1F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld */; };
+		6E85FB261F8A730900B03AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB221F8A730900B03AE1 /* LaunchScreen.storyboard */; };
+		6E85FB271F8A730900B03AE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB241F8A730900B03AE1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +36,19 @@
 
 /* Begin PBXFileReference section */
 		6E85FADD1F8A6ED100B03AE1 /* MarketAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E85FAE01F8A6ED100B03AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E85FAE21F8A6ED100B03AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E85FAE51F8A6ED100B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6E85FAE81F8A6ED100B03AE1 /* MarketAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarketAPP.xcdatamodel; sourceTree = "<group>"; };
-		6E85FAEA1F8A6ED100B03AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E85FAED1F8A6ED100B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6E85FAEF1F8A6ED100B03AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E85FAF41F8A6ED200B03AE1 /* MarketAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E85FAF81F8A6ED200B03AE1 /* MarketAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAPPTests.swift; sourceTree = "<group>"; };
 		6E85FAFA1F8A6ED200B03AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E85FAFF1F8A6ED200B03AE1 /* MarketAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E85FB031F8A6ED200B03AE1 /* MarketAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAPPUITests.swift; sourceTree = "<group>"; };
 		6E85FB051F8A6ED200B03AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E85FB181F8A72D500B03AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Rescources/Assets.xcassets; sourceTree = "<group>"; };
+		6E85FB1B1F8A72ED00B03AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Supporting/AppDelegate.swift; sourceTree = "<group>"; };
+		6E85FB1C1F8A72ED00B03AE1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
+		6E85FB1E1F8A72ED00B03AE1 /* MarketAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarketAPP.xcdatamodel; sourceTree = "<group>"; };
+		6E85FB231F8A730900B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Storyboards/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E85FB251F8A730900B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E85FB281F8A736700B03AE1 /* MarketAPP-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarketAPP-Bridging-Header.h"; path = "Supporting/MarketAPP-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,13 @@
 		6E85FADF1F8A6ED100B03AE1 /* MarketAPP */ = {
 			isa = PBXGroup;
 			children = (
-				6E85FAE01F8A6ED100B03AE1 /* AppDelegate.swift */,
-				6E85FAE21F8A6ED100B03AE1 /* ViewController.swift */,
-				6E85FAE41F8A6ED100B03AE1 /* Main.storyboard */,
-				6E85FAEA1F8A6ED100B03AE1 /* Assets.xcassets */,
-				6E85FAEC1F8A6ED100B03AE1 /* LaunchScreen.storyboard */,
-				6E85FAEF1F8A6ED100B03AE1 /* Info.plist */,
-				6E85FAE71F8A6ED100B03AE1 /* MarketAPP.xcdatamodeld */,
+				6E85FB171F8A71A800B03AE1 /* Rescources */,
+				6E85FB161F8A717600B03AE1 /* Views */,
+				6E85FB151F8A712F00B03AE1 /* Services */,
+				6E85FB141F8A70BE00B03AE1 /* Models */,
+				6E85FB131F8A70A800B03AE1 /* Supporting */,
+				6E85FB121F8A706500B03AE1 /* Controllers */,
+				6E85FB111F8A705900B03AE1 /* Storyboards */,
 			);
 			path = MarketAPP;
 			sourceTree = "<group>";
@@ -126,6 +126,70 @@
 				6E85FB051F8A6ED200B03AE1 /* Info.plist */,
 			);
 			path = MarketAPPUITests;
+			sourceTree = "<group>";
+		};
+		6E85FB111F8A705900B03AE1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6E85FB221F8A730900B03AE1 /* LaunchScreen.storyboard */,
+				6E85FB241F8A730900B03AE1 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		6E85FB121F8A706500B03AE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E85FB291F8A73F400B03AE1 /* Logins */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6E85FB131F8A70A800B03AE1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				6E85FB281F8A736700B03AE1 /* MarketAPP-Bridging-Header.h */,
+				6E85FB1B1F8A72ED00B03AE1 /* AppDelegate.swift */,
+				6E85FB1C1F8A72ED00B03AE1 /* Info.plist */,
+				6E85FB1D1F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		6E85FB141F8A70BE00B03AE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6E85FB151F8A712F00B03AE1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		6E85FB161F8A717600B03AE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6E85FB171F8A71A800B03AE1 /* Rescources */ = {
+			isa = PBXGroup;
+			children = (
+				6E85FB181F8A72D500B03AE1 /* Assets.xcassets */,
+			);
+			name = Rescources;
+			sourceTree = "<group>";
+		};
+		6E85FB291F8A73F400B03AE1 /* Logins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Logins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +261,7 @@
 					6E85FADC1F8A6ED100B03AE1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2X5M32A4UP;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					6E85FAF31F8A6ED200B03AE1 = {
@@ -238,9 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E85FAEE1F8A6ED100B03AE1 /* LaunchScreen.storyboard in Resources */,
-				6E85FAEB1F8A6ED100B03AE1 /* Assets.xcassets in Resources */,
-				6E85FAE61F8A6ED100B03AE1 /* Main.storyboard in Resources */,
+				6E85FB261F8A730900B03AE1 /* LaunchScreen.storyboard in Resources */,
+				6E85FB201F8A72ED00B03AE1 /* Info.plist in Resources */,
+				6E85FB191F8A72D500B03AE1 /* Assets.xcassets in Resources */,
+				6E85FB271F8A730900B03AE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E85FAE91F8A6ED100B03AE1 /* MarketAPP.xcdatamodeld in Sources */,
-				6E85FAE31F8A6ED100B03AE1 /* ViewController.swift in Sources */,
-				6E85FAE11F8A6ED100B03AE1 /* AppDelegate.swift in Sources */,
+				6E85FB1F1F8A72ED00B03AE1 /* AppDelegate.swift in Sources */,
+				6E85FB211F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,20 +368,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E85FAE41F8A6ED100B03AE1 /* Main.storyboard */ = {
+		6E85FB221F8A730900B03AE1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E85FAE51F8A6ED100B03AE1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6E85FAEC1F8A6ED100B03AE1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E85FAED1F8A6ED100B03AE1 /* Base */,
+				6E85FB231F8A730900B03AE1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6E85FB241F8A730900B03AE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E85FB251F8A730900B03AE1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -421,11 +486,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2X5M32A4UP;
 				INFOPLIST_FILE = MarketAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willcohen.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP/MarketAPP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -434,11 +502,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2X5M32A4UP;
 				INFOPLIST_FILE = MarketAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willcohen.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP/MarketAPP-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -520,6 +590,7 @@
 				6E85FB0A1F8A6ED200B03AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E85FB0B1F8A6ED200B03AE1 /* Build configuration list for PBXNativeTarget "MarketAPPTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +599,7 @@
 				6E85FB0D1F8A6ED200B03AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E85FB0E1F8A6ED200B03AE1 /* Build configuration list for PBXNativeTarget "MarketAPPUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,17 +608,19 @@
 				6E85FB101F8A6ED200B03AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6E85FAE71F8A6ED100B03AE1 /* MarketAPP.xcdatamodeld */ = {
+		6E85FB1D1F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6E85FAE81F8A6ED100B03AE1 /* MarketAPP.xcdatamodel */,
+				6E85FB1E1F8A72ED00B03AE1 /* MarketAPP.xcdatamodel */,
 			);
-			currentVersion = 6E85FAE81F8A6ED100B03AE1 /* MarketAPP.xcdatamodel */;
-			path = MarketAPP.xcdatamodeld;
+			currentVersion = 6E85FB1E1F8A72ED00B03AE1 /* MarketAPP.xcdatamodel */;
+			name = MarketAPP.xcdatamodeld;
+			path = Supporting/MarketAPP.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
