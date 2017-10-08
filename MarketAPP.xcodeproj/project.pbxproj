@@ -26,6 +26,14 @@
 		6E85FB571F8A76D100B03AE1 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB4C1F8A76D100B03AE1 /* Roboto-MediumItalic.ttf */; };
 		6E85FB581F8A76D100B03AE1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB4D1F8A76D100B03AE1 /* Roboto-Regular.ttf */; };
 		6E85FB591F8A76D100B03AE1 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E85FB4E1F8A76D100B03AE1 /* Roboto-Thin.ttf */; };
+		6E85FB5B1F8A912C00B03AE1 /* FeatureListPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB5A1F8A912C00B03AE1 /* FeatureListPageController.swift */; };
+		6E85FB611F8AA19400B03AE1 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB601F8AA19400B03AE1 /* LandingController.swift */; };
+		6E85FB631F8AB43000B03AE1 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB621F8AB43000B03AE1 /* Variables.swift */; };
+		6E85FB661F8ACA7000B03AE1 /* FirstFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */; };
+		6E85FB681F8ACAEE00B03AE1 /* SecondFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */; };
+		6E85FB6A1F8ACAFB00B03AE1 /* ThirdFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */; };
+		6E85FB6C1F8ACB0800B03AE1 /* FourthFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */; };
+		6E85FB6E1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB6D1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +67,6 @@
 		6E85FB1E1F8A72ED00B03AE1 /* MarketAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarketAPP.xcdatamodel; sourceTree = "<group>"; };
 		6E85FB231F8A730900B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Storyboards/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E85FB251F8A730900B03AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6E85FB281F8A736700B03AE1 /* MarketAPP-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MarketAPP-Bridging-Header.h"; path = "Supporting/MarketAPP-Bridging-Header.h"; sourceTree = "<group>"; };
 		6E85FB441F8A76D100B03AE1 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "Rescources/Fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		6E85FB451F8A76D100B03AE1 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "Rescources/Fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		6E85FB461F8A76D100B03AE1 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Rescources/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -71,6 +78,15 @@
 		6E85FB4C1F8A76D100B03AE1 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "Rescources/Fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		6E85FB4D1F8A76D100B03AE1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Rescources/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		6E85FB4E1F8A76D100B03AE1 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "Rescources/Fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		6E85FB5A1F8A912C00B03AE1 /* FeatureListPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureListPageController.swift; path = Controllers/FeatureListPageController.swift; sourceTree = "<group>"; };
+		6E85FB5F1F8A95A300B03AE1 /* MarketAPP-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MarketAPP-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		6E85FB601F8AA19400B03AE1 /* LandingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingController.swift; path = Controllers/LandingController.swift; sourceTree = "<group>"; };
+		6E85FB621F8AB43000B03AE1 /* Variables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Variables.swift; path = Supporting/Variables.swift; sourceTree = "<group>"; };
+		6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstFeatureController.swift; path = Controllers/FirstFeatureController.swift; sourceTree = "<group>"; };
+		6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondFeatureController.swift; path = Controllers/SecondFeatureController.swift; sourceTree = "<group>"; };
+		6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdFeatureController.swift; path = Controllers/ThirdFeatureController.swift; sourceTree = "<group>"; };
+		6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourthFeatureController.swift; path = Controllers/FourthFeatureController.swift; sourceTree = "<group>"; };
+		6E85FB6D1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphFeatureDisplayView.swift; path = Views/GraphFeatureDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,10 +186,11 @@
 		6E85FB131F8A70A800B03AE1 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				6E85FB281F8A736700B03AE1 /* MarketAPP-Bridging-Header.h */,
+				6E85FB5F1F8A95A300B03AE1 /* MarketAPP-Bridging-Header.h */,
 				6E85FB1B1F8A72ED00B03AE1 /* AppDelegate.swift */,
 				6E85FB1C1F8A72ED00B03AE1 /* Info.plist */,
 				6E85FB1D1F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld */,
+				6E85FB621F8AB43000B03AE1 /* Variables.swift */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -195,6 +212,7 @@
 		6E85FB161F8A717600B03AE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E85FB6D1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -211,6 +229,9 @@
 		6E85FB291F8A73F400B03AE1 /* Logins */ = {
 			isa = PBXGroup;
 			children = (
+				6E85FB641F8ACA4400B03AE1 /* Features */,
+				6E85FB5A1F8A912C00B03AE1 /* FeatureListPageController.swift */,
+				6E85FB601F8AA19400B03AE1 /* LandingController.swift */,
 			);
 			name = Logins;
 			sourceTree = "<group>";
@@ -231,6 +252,17 @@
 				6E85FB4E1F8A76D100B03AE1 /* Roboto-Thin.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		6E85FB641F8ACA4400B03AE1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */,
+				6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */,
+				6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */,
+				6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */,
+			);
+			name = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,8 +415,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E85FB6C1F8ACB0800B03AE1 /* FourthFeatureController.swift in Sources */,
 				6E85FB1F1F8A72ED00B03AE1 /* AppDelegate.swift in Sources */,
+				6E85FB5B1F8A912C00B03AE1 /* FeatureListPageController.swift in Sources */,
+				6E85FB6A1F8ACAFB00B03AE1 /* ThirdFeatureController.swift in Sources */,
 				6E85FB211F8A72ED00B03AE1 /* MarketAPP.xcdatamodeld in Sources */,
+				6E85FB661F8ACA7000B03AE1 /* FirstFeatureController.swift in Sources */,
+				6E85FB611F8AA19400B03AE1 /* LandingController.swift in Sources */,
+				6E85FB631F8AB43000B03AE1 /* Variables.swift in Sources */,
+				6E85FB681F8ACAEE00B03AE1 /* SecondFeatureController.swift in Sources */,
+				6E85FB6E1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,13 +580,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2X5M32A4UP;
-				INFOPLIST_FILE = MarketAPP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MarketAPP/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willcohen.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP/MarketAPP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -556,12 +597,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2X5M32A4UP;
-				INFOPLIST_FILE = MarketAPP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MarketAPP/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willcohen.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP/MarketAPP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketAPP-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

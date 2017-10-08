@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Landing Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,27 +80,251 @@
                                     <constraint firstAttribute="height" constant="70" id="x02-DU-W8O"/>
                                 </constraints>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho7-VM-Rt3">
+                                <rect key="frame" x="31" y="225" width="313" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="efF-D6-oX8"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Va5-A9-aNl" kind="embed" identifier="containerSegue" id="OPE-QD-DzG"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-k9-Wov">
+                                <rect key="frame" x="31" y="445" width="313" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L8O-2t-loo">
+                                        <rect key="frame" x="104" y="17.5" width="105" height="15"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aD-Uz-nm4">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="KaB-NC-3pk"/>
+                                                    <constraint firstAttribute="width" constant="15" id="NYJ-L4-vgn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxU-xY-2b4">
+                                                <rect key="frame" x="30" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="Ra4-Cy-26n"/>
+                                                    <constraint firstAttribute="width" constant="15" id="Wdp-jG-5TY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wof-HW-IzN">
+                                                <rect key="frame" x="60" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="1eK-gT-WO3"/>
+                                                    <constraint firstAttribute="width" constant="15" id="QxQ-DO-siX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-Q5-oYt">
+                                                <rect key="frame" x="90" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="OyF-dz-Rxb"/>
+                                                    <constraint firstAttribute="width" constant="15" id="iSi-iP-Lku"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.35430646088957057" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="L8O-2t-loo" firstAttribute="centerY" secondItem="kYa-k9-Wov" secondAttribute="centerY" id="9lO-3J-pfN"/>
+                                    <constraint firstItem="L8O-2t-loo" firstAttribute="centerX" secondItem="kYa-k9-Wov" secondAttribute="centerX" id="geW-m9-77P"/>
+                                    <constraint firstAttribute="height" constant="50" id="tLr-e3-FRn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ho7-VM-Rt3" firstAttribute="top" secondItem="pZC-V0-2Ax" secondAttribute="bottom" constant="50" id="7x8-MP-iqn"/>
                             <constraint firstAttribute="trailing" secondItem="pZC-V0-2Ax" secondAttribute="trailing" constant="15" id="GDi-1b-gMs"/>
                             <constraint firstItem="yic-RU-Cvk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="XuP-jm-fTH"/>
                             <constraint firstAttribute="trailing" secondItem="bQc-Eo-N5o" secondAttribute="trailing" id="aXZ-fR-XCc"/>
                             <constraint firstAttribute="trailing" secondItem="kKo-p3-Xnk" secondAttribute="trailing" id="cR6-43-PJP"/>
+                            <constraint firstItem="kYa-k9-Wov" firstAttribute="top" secondItem="Ho7-VM-Rt3" secondAttribute="bottom" id="ccA-TS-Ctj"/>
                             <constraint firstItem="pZC-V0-2Ax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ckO-6y-vwa"/>
                             <constraint firstItem="pZC-V0-2Ax" firstAttribute="top" secondItem="yic-RU-Cvk" secondAttribute="bottom" id="emM-b8-MAs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bQc-Eo-N5o" secondAttribute="bottom" id="nBn-Gw-Jvo"/>
                             <constraint firstItem="kKo-p3-Xnk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o0Z-1h-R9Y"/>
                             <constraint firstItem="bQc-Eo-N5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q6Z-13-oI8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kKo-p3-Xnk" secondAttribute="bottom" id="r8d-xk-Tay"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ho7-VM-Rt3" secondAttribute="trailing" constant="15" id="sVX-JF-ybW"/>
                             <constraint firstItem="bQc-Eo-N5o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v0t-YX-2se"/>
                             <constraint firstItem="yic-RU-Cvk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vRs-ZD-hVw"/>
+                            <constraint firstItem="Ho7-VM-Rt3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="wxu-A0-XJF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kYa-k9-Wov" secondAttribute="trailing" constant="15" id="ypH-Ee-jc3"/>
+                            <constraint firstItem="kYa-k9-Wov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="ysB-h3-dNB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstFeatureIndicator" destination="9aD-Uz-nm4" id="CF7-lL-zso"/>
+                        <outlet property="fourthFeatureIndicator" destination="eaZ-Q5-oYt" id="IOM-N1-wtj"/>
+                        <outlet property="secondFeatureIndicator" destination="rxU-xY-2b4" id="ubM-Jg-f5R"/>
+                        <outlet property="thirdFeatureIndicator" destination="wof-HW-IzN" id="esc-tO-cmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+        <!--Feature List Page Controller-->
+        <scene sceneID="eqg-m4-2h2">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Va5-A9-aNl" customClass="FeatureListPageController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="313" height="220"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwN-IJ-8kL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="697"/>
+        </scene>
+        <!--First Feature Controller-->
+        <scene sceneID="7ft-JF-EG2">
+            <objects>
+                <viewController storyboardIdentifier="firstFeature" id="FLA-ip-RMO" customClass="FirstFeatureController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LKY-mR-cB2"/>
+                        <viewControllerLayoutGuide type="bottom" id="tuh-8F-AKo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nun-6j-6d0">
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-Xl-IuN">
+                                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-80-CI6" customClass="GraphFeatureDisplayView" customModule="MarketAPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.2784313725" green="0.1529411765" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.323781818151474" green="0.2699563205242157" blue="0.49812999367713928" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.3499568634969325" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CvV-80-CI6" secondAttribute="trailing" id="7GQ-FB-AWz"/>
+                                    <constraint firstItem="CvV-80-CI6" firstAttribute="leading" secondItem="sh5-Xl-IuN" secondAttribute="leading" id="9Qn-wY-jEq"/>
+                                    <constraint firstAttribute="bottom" secondItem="CvV-80-CI6" secondAttribute="bottom" constant="20" id="jno-tO-K8U"/>
+                                    <constraint firstItem="CvV-80-CI6" firstAttribute="top" secondItem="sh5-Xl-IuN" secondAttribute="top" id="mUa-8D-AdO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.46666666666666667" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="sh5-Xl-IuN" firstAttribute="leading" secondItem="Nun-6j-6d0" secondAttribute="leading" id="K4a-yr-cYX"/>
+                            <constraint firstItem="sh5-Xl-IuN" firstAttribute="top" secondItem="Nun-6j-6d0" secondAttribute="top" id="TkL-NU-I5v"/>
+                            <constraint firstItem="tuh-8F-AKo" firstAttribute="top" secondItem="sh5-Xl-IuN" secondAttribute="bottom" id="lSV-zP-DrG"/>
+                            <constraint firstAttribute="trailing" secondItem="sh5-Xl-IuN" secondAttribute="trailing" id="oYu-cr-VMZ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="313" height="220"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqR-gR-gpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-879.20000000000005" y="998.5007496251875"/>
+        </scene>
+        <!--Second Feature Controller-->
+        <scene sceneID="SdA-Vh-lKe">
+            <objects>
+                <viewController storyboardIdentifier="secondFeature" id="ZYL-iU-kEq" customClass="SecondFeatureController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H1H-ol-M19"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zfa-Sa-dRZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sKE-LN-jhd">
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtu-5W-STw">
+                                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.35177818251533743" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78823529410000004" green="0.74901960779999999" blue="0.84313725490000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zfa-Sa-dRZ" firstAttribute="top" secondItem="gtu-5W-STw" secondAttribute="bottom" id="EYR-p6-1y9"/>
+                            <constraint firstItem="gtu-5W-STw" firstAttribute="leading" secondItem="sKE-LN-jhd" secondAttribute="leading" id="Frn-8s-UEc"/>
+                            <constraint firstItem="gtu-5W-STw" firstAttribute="top" secondItem="sKE-LN-jhd" secondAttribute="top" id="GJ1-8I-d8u"/>
+                            <constraint firstAttribute="trailing" secondItem="gtu-5W-STw" secondAttribute="trailing" id="UYd-po-Ne5"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="313" height="220"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rE-ag-Qjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="984"/>
+        </scene>
+        <!--Third Feature Controller-->
+        <scene sceneID="zTU-81-MYA">
+            <objects>
+                <viewController storyboardIdentifier="thirdFeature" id="fDj-h0-0d9" customClass="ThirdFeatureController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eYo-3N-aFy"/>
+                        <viewControllerLayoutGuide type="bottom" id="H5t-8B-Bwp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xVd-hK-B2c">
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pN-9N-xxP">
+                                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.35290452453987731" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.1150156111" blue="0.21039620819999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8pN-9N-xxP" secondAttribute="trailing" id="8u8-Zz-JYE"/>
+                            <constraint firstItem="8pN-9N-xxP" firstAttribute="top" secondItem="xVd-hK-B2c" secondAttribute="top" id="SuM-va-pTW"/>
+                            <constraint firstItem="8pN-9N-xxP" firstAttribute="leading" secondItem="xVd-hK-B2c" secondAttribute="leading" id="XTE-bb-5bt"/>
+                            <constraint firstItem="H5t-8B-Bwp" firstAttribute="top" secondItem="8pN-9N-xxP" secondAttribute="bottom" id="s5R-Vp-g2b"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="313" height="220"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F44-Kc-bGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="984"/>
+        </scene>
+        <!--Fourth Feature Controller-->
+        <scene sceneID="a4t-jg-usG">
+            <objects>
+                <viewController storyboardIdentifier="fourthFeature" id="9fF-Q2-h87" customClass="FourthFeatureController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bwW-wR-VkU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ItL-DZ-5Rf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x7Y-bN-sbP">
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aam-nh-a44">
+                                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.34992091641104295" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aam-nh-a44" firstAttribute="leading" secondItem="x7Y-bN-sbP" secondAttribute="leading" id="H2S-GS-DyT"/>
+                            <constraint firstItem="ItL-DZ-5Rf" firstAttribute="top" secondItem="aam-nh-a44" secondAttribute="bottom" id="gVI-gb-wfY"/>
+                            <constraint firstAttribute="trailing" secondItem="aam-nh-a44" secondAttribute="trailing" id="pgW-FL-mu8"/>
+                            <constraint firstItem="aam-nh-a44" firstAttribute="top" secondItem="x7Y-bN-sbP" secondAttribute="top" id="wO1-W9-goA"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="313" height="220"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gf5-JF-Dpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="984"/>
         </scene>
     </scenes>
     <resources>
