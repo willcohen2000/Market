@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class LandingController: UIViewController {
 
@@ -17,6 +18,14 @@ class LandingController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changeIndicator(images: [firstFeatureIndicator, secondFeatureIndicator, thirdFeatureIndicator], pageNum: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (KeychainWrapper.standard.string(forKey: "uid") != nil) {
+            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = homeStoryboard.instantiateViewController(withIdentifier: "myStocksVC") as UIViewController
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
      func changeIndicator(images: [UIImageView], pageNum: Int) {
