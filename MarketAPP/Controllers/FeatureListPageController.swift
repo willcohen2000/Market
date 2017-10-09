@@ -22,9 +22,7 @@ class FeatureListPageController: UIPageViewController {
         secondFeature.delegate = self
         let thirdFeature = storyboardObject.instantiateViewController(withIdentifier: "thirdFeature") as! ThirdFeatureController
         thirdFeature.delegate = self
-        let fourthFeature = storyboardObject.instantiateViewController(withIdentifier: "fourthFeature") as! FourthFeatureController
-        fourthFeature.delegate = self
-        return [firstFeature, secondFeature, thirdFeature, fourthFeature]
+        return [firstFeature, secondFeature, thirdFeature]
     }()
     
     var pageChange: pageChangePro!
@@ -42,29 +40,7 @@ class FeatureListPageController: UIPageViewController {
 
 }
 
-extension FeatureListPageController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "firstFeature") {
-            if let featurePage = segue.destination as? FirstFeatureController {
-                featurePage.delegate = self
-            }
-        } else if (segue.identifier == "secondFeature") {
-            if let featurePage = segue.destination as? SecondFeatureController {
-                featurePage.delegate = self
-            }
-        } else if (segue.identifier == "thirdFeature") {
-            if let featurePage = segue.destination as? ThirdFeatureController {
-                featurePage.delegate = self
-            }
-        } else if (segue.identifier == "fourthFeature") {
-            if let featurePage = segue.destination as? FourthFeatureController {
-                featurePage.delegate = self
-            }
-        }
-    }
-}
-
-extension FeatureListPageController: firstFeatureActivatedProtocol, secondFeatureActivatedProtocol, thirdFeatureActivatedProtocol, fourthFeatureActivatedProtocol {
+extension FeatureListPageController: firstFeatureActivatedProtocol, secondFeatureActivatedProtocol, thirdFeatureActivatedProtocol {
     
     func firstFeatureActivated() {
         pageChange.pageChanged(0)
@@ -78,10 +54,6 @@ extension FeatureListPageController: firstFeatureActivatedProtocol, secondFeatur
         pageChange.pageChanged(2)
     }
     
-    func fourthFeatureActivated() {
-        pageChange.pageChanged(3)
-    }
-    
 }
 
 extension FeatureListPageController: UIPageViewControllerDataSource {
@@ -93,8 +65,6 @@ extension FeatureListPageController: UIPageViewControllerDataSource {
             return featureList[0]
         } else if (viewController == featureList[2]) {
             return featureList[1]
-        } else if (viewController == featureList[3]) {
-            return featureList[2]
         } else {
             return nil
         }
@@ -106,8 +76,6 @@ extension FeatureListPageController: UIPageViewControllerDataSource {
             return featureList[1]
         } else if (viewController == featureList[1]) {
             return featureList[2]
-        } else if (viewController == featureList[2]) {
-            return featureList[3]
         } else {
             return nil
         }

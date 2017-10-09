@@ -93,7 +93,7 @@
                                 <rect key="frame" x="31" y="445" width="313" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L8O-2t-loo">
-                                        <rect key="frame" x="104" y="17.5" width="105" height="15"/>
+                                        <rect key="frame" x="119" y="17.5" width="75" height="15"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aD-Uz-nm4">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -114,13 +114,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="1eK-gT-WO3"/>
                                                     <constraint firstAttribute="width" constant="15" id="QxQ-DO-siX"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-Q5-oYt">
-                                                <rect key="frame" x="90" y="0.0" width="15" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="OyF-dz-Rxb"/>
-                                                    <constraint firstAttribute="width" constant="15" id="iSi-iP-Lku"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -158,7 +151,6 @@
                     </view>
                     <connections>
                         <outlet property="firstFeatureIndicator" destination="9aD-Uz-nm4" id="CF7-lL-zso"/>
-                        <outlet property="fourthFeatureIndicator" destination="eaZ-Q5-oYt" id="IOM-N1-wtj"/>
                         <outlet property="secondFeatureIndicator" destination="rxU-xY-2b4" id="ubM-Jg-f5R"/>
                         <outlet property="thirdFeatureIndicator" destination="wof-HW-IzN" id="esc-tO-cmr"/>
                     </connections>
@@ -383,38 +375,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F44-Kc-bGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478" y="999"/>
-        </scene>
-        <!--Fourth Feature Controller-->
-        <scene sceneID="a4t-jg-usG">
-            <objects>
-                <viewController storyboardIdentifier="fourthFeature" id="9fF-Q2-h87" customClass="FourthFeatureController" customModule="MarketAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bwW-wR-VkU"/>
-                        <viewControllerLayoutGuide type="bottom" id="ItL-DZ-5Rf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x7Y-bN-sbP">
-                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aam-nh-a44">
-                                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
-                                <color key="backgroundColor" red="0.27843137254901962" green="0.15294117647058825" blue="0.42352941176470588" alpha="0.34992091641104295" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aam-nh-a44" firstAttribute="leading" secondItem="x7Y-bN-sbP" secondAttribute="leading" id="H2S-GS-DyT"/>
-                            <constraint firstItem="ItL-DZ-5Rf" firstAttribute="top" secondItem="aam-nh-a44" secondAttribute="bottom" id="gVI-gb-wfY"/>
-                            <constraint firstAttribute="trailing" secondItem="aam-nh-a44" secondAttribute="trailing" id="pgW-FL-mu8"/>
-                            <constraint firstItem="aam-nh-a44" firstAttribute="top" secondItem="x7Y-bN-sbP" secondAttribute="top" id="wO1-W9-goA"/>
-                        </constraints>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="313" height="220"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gf5-JF-Dpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1134" y="984"/>
         </scene>
     </scenes>
     <resources>

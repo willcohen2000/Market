@@ -13,19 +13,17 @@ class LandingController: UIViewController {
     @IBOutlet weak var firstFeatureIndicator: UIImageView!
     @IBOutlet weak var secondFeatureIndicator: UIImageView!
     @IBOutlet weak var thirdFeatureIndicator: UIImageView!
-    @IBOutlet weak var fourthFeatureIndicator: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeIndicator(images: [firstFeatureIndicator, secondFeatureIndicator, thirdFeatureIndicator, fourthFeatureIndicator], pageNum: 0)
+        changeIndicator(images: [firstFeatureIndicator, secondFeatureIndicator, thirdFeatureIndicator], pageNum: 0)
     }
     
      func changeIndicator(images: [UIImageView], pageNum: Int) {
         let imageDictionary: [Int:UIImageView] = [
             0: firstFeatureIndicator,
             1: secondFeatureIndicator,
-            2: thirdFeatureIndicator,
-            3: fourthFeatureIndicator
+            2: thirdFeatureIndicator
         ]
         
         for (image) in images {
@@ -50,7 +48,7 @@ class LandingController: UIViewController {
 
 extension LandingController: pageChangePro {
     func pageChanged(_ pageNumber: Int) {
-        changeIndicator(images: [firstFeatureIndicator, secondFeatureIndicator, thirdFeatureIndicator, fourthFeatureIndicator], pageNum: pageNumber)
+        changeIndicator(images: [firstFeatureIndicator, secondFeatureIndicator, thirdFeatureIndicator], pageNum: pageNumber)
     }
 }
 

@@ -32,7 +32,6 @@
 		6E85FB661F8ACA7000B03AE1 /* FirstFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */; };
 		6E85FB681F8ACAEE00B03AE1 /* SecondFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */; };
 		6E85FB6A1F8ACAFB00B03AE1 /* ThirdFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */; };
-		6E85FB6C1F8ACB0800B03AE1 /* FourthFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */; };
 		6E85FB6E1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85FB6D1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +84,6 @@
 		6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstFeatureController.swift; path = Controllers/FirstFeatureController.swift; sourceTree = "<group>"; };
 		6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondFeatureController.swift; path = Controllers/SecondFeatureController.swift; sourceTree = "<group>"; };
 		6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdFeatureController.swift; path = Controllers/ThirdFeatureController.swift; sourceTree = "<group>"; };
-		6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourthFeatureController.swift; path = Controllers/FourthFeatureController.swift; sourceTree = "<group>"; };
 		6E85FB6D1F8ADD8200B03AE1 /* GraphFeatureDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphFeatureDisplayView.swift; path = Views/GraphFeatureDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,7 +258,6 @@
 				6E85FB651F8ACA7000B03AE1 /* FirstFeatureController.swift */,
 				6E85FB671F8ACAEE00B03AE1 /* SecondFeatureController.swift */,
 				6E85FB691F8ACAFB00B03AE1 /* ThirdFeatureController.swift */,
-				6E85FB6B1F8ACB0800B03AE1 /* FourthFeatureController.swift */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -415,7 +412,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E85FB6C1F8ACB0800B03AE1 /* FourthFeatureController.swift in Sources */,
 				6E85FB1F1F8A72ED00B03AE1 /* AppDelegate.swift in Sources */,
 				6E85FB5B1F8A912C00B03AE1 /* FeatureListPageController.swift in Sources */,
 				6E85FB6A1F8ACAFB00B03AE1 /* ThirdFeatureController.swift in Sources */,
