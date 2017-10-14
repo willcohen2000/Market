@@ -459,14 +459,22 @@
                                     <constraint firstAttribute="trailing" secondItem="n08-Nv-cAr" secondAttribute="trailing" id="xrh-Y3-xDe"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-q5-ADI" customClass="GraphFeatureDisplayView" customModule="MarketAPP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="389" width="375" height="278"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jba-gc-Ez9" firstAttribute="leading" secondItem="Yg8-Fe-eEX" secondAttribute="leading" id="0Ww-zK-Vrf"/>
+                            <constraint firstAttribute="trailing" secondItem="Apu-q5-ADI" secondAttribute="trailing" id="4M0-zL-eDZ"/>
                             <constraint firstItem="70k-UH-q83" firstAttribute="top" secondItem="IjP-v5-vqx" secondAttribute="bottom" constant="20" id="52w-ho-2LW"/>
                             <constraint firstAttribute="trailing" secondItem="jba-gc-Ez9" secondAttribute="trailing" id="CYX-Ik-iNU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r3e-ff-Ed2" secondAttribute="trailing" constant="20" id="FiJ-JJ-vW3"/>
+                            <constraint firstItem="tvl-tk-Trw" firstAttribute="top" secondItem="Apu-q5-ADI" secondAttribute="bottom" id="L0d-Ul-kqt"/>
+                            <constraint firstItem="Apu-q5-ADI" firstAttribute="top" secondItem="r3e-ff-Ed2" secondAttribute="bottom" constant="15" id="Nmm-nL-vdK"/>
                             <constraint firstItem="70k-UH-q83" firstAttribute="centerX" secondItem="Yg8-Fe-eEX" secondAttribute="centerX" id="Po0-Fn-en0"/>
+                            <constraint firstItem="Apu-q5-ADI" firstAttribute="leading" secondItem="Yg8-Fe-eEX" secondAttribute="leading" id="VeW-Ff-WUd"/>
                             <constraint firstItem="tvl-tk-Trw" firstAttribute="top" secondItem="jba-gc-Ez9" secondAttribute="bottom" id="XMi-kZ-gkL"/>
                             <constraint firstItem="jba-gc-Ez9" firstAttribute="top" secondItem="Yg8-Fe-eEX" secondAttribute="top" id="hMg-BT-ET9"/>
                             <constraint firstItem="r3e-ff-Ed2" firstAttribute="leading" secondItem="Yg8-Fe-eEX" secondAttribute="leadingMargin" constant="20" id="oba-tr-lX6"/>

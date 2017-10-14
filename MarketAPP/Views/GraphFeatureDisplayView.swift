@@ -10,14 +10,15 @@ import UIKit
 
 @IBDesignable class GraphFeatureDisplayView: UIView {
 
-    var graphPoints = [4,2,6,4,5,8,3]
+    var graphPoints = [5,5,6,4,5,6,5,6,6,7,5,4,5]
+    let strokeColor = UIColor(red:0.79, green:0.75, blue:0.84, alpha:1.0)
     
     private struct Constants {
         static let margin: CGFloat = 0.0
         static let topBorder: CGFloat = 10
         static let bottomBorder: CGFloat = 20
         static let colorAlpha: CGFloat = 0.3
-        static let circleDiameter: CGFloat = 5.0
+        static let circleDiameter: CGFloat = 7.5
     }
     
     override func draw(_ rect: CGRect) {
@@ -57,6 +58,7 @@ import UIKit
             let nextPoint = CGPoint(x: columnXPoint(point), y: columnYPoint(graphPoints[point]))
             graphPath.addLine(to: nextPoint)
         }
+        context.saveGState()
         
         // CREATE GRADIENT
         let clippingPath = graphPath.copy() as! UIBezierPath
@@ -69,9 +71,21 @@ import UIKit
         let graphStartPoint = CGPoint(x: 0, y: highestYPoint)
         let graphEndPoint = CGPoint(x: 0, y: bounds.height)
         context.drawLinearGradient(gradient, start: graphStartPoint, end: graphEndPoint, options: [])
+        context.restoreGState()
         
-        graphPath.lineWidth = 0.0
+        graphPath.lineWidth = 2.0
+        strokeColor.setStroke()
         graphPath.stroke()
+        
+        for i in 0..<graphPoints.count {
+            var point = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
+            point.x -= Constants.circleDiameter / 2
+            point.y -= Constants.circleDiameter / 2
+            
+            let circle = UIBezierPath(ovalIn: CGRect(origin: point, size: CGSize(width: Constants.circleDiameter, height: Constants.circleDiameter)))
+            strokeColor.setFill()
+            circle.fill()
+        }
         
     }
     
