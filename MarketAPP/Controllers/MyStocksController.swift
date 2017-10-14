@@ -56,8 +56,13 @@ class MyStocksController: UIViewController {
         }))
         present(signOutPrompt, animated: true, completion: nil)
     }
-
     
+}
+
+extension MyStocksController: stockSelectedDelegate {
+    func stockSelectedPressed(_ stock: Stock) {
+        print(stock.name)
+    }
 }
 
 extension MyStocksController: UITableViewDelegate, UITableViewDataSource {
@@ -71,12 +76,13 @@ extension MyStocksController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let post = optionsArr[indexPath.row]
-        if let stockCell = myStocksTableView.dequeueReusableCell(withIdentifier: "stockCell") {
+        //let stock = optionsArr[indexPath.row]
+        if let stockCell = myStocksTableView.dequeueReusableCell(withIdentifier: "stockCell") as? MyStocksCell {
+            stockCell.delegate = self
             stockCell.backgroundColor = UIColor.clear
             return stockCell
         } else {
-            return UITableViewCell()
+            return MyStocksCell()
         }
     }
     

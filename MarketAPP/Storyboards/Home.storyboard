@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,11 +81,11 @@
                                     <constraint firstAttribute="height" constant="60" id="mxT-Co-ahd"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-Er-30P">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-Er-30P">
                                 <rect key="frame" x="0.0" y="145" width="375" height="462"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="77" id="TV8-g3-q5S">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="77" id="TV8-g3-q5S" customClass="MyStocksCell" customModule="MarketAPP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TV8-g3-q5S" id="xnt-IQ-G3t">
@@ -133,16 +133,26 @@
                                                                 <constraint firstAttribute="height" constant="66" id="oy9-Au-KTb"/>
                                                             </constraints>
                                                         </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KS9-3h-J0h">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                                            <connections>
+                                                                <action selector="stockSelected:" destination="TV8-g3-q5S" eventType="touchUpInside" id="ku1-TE-TTi"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="KS9-3h-J0h" secondAttribute="bottom" id="DQl-Ct-O39"/>
                                                         <constraint firstItem="KXe-Bs-taP" firstAttribute="leading" secondItem="MCi-et-Xsa" secondAttribute="trailing" constant="5" id="LBB-NJ-UH3"/>
                                                         <constraint firstItem="MCi-et-Xsa" firstAttribute="centerY" secondItem="xX5-LZ-ODZ" secondAttribute="centerY" id="NXy-j1-9p9"/>
                                                         <constraint firstAttribute="bottom" secondItem="r1Z-i5-HVk" secondAttribute="bottom" id="UvS-6t-t3c"/>
                                                         <constraint firstItem="r1Z-i5-HVk" firstAttribute="leading" secondItem="KXe-Bs-taP" secondAttribute="trailing" constant="5" id="VD2-Oe-zEs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KS9-3h-J0h" secondAttribute="trailing" id="YAz-OI-UUN"/>
                                                         <constraint firstItem="MCi-et-Xsa" firstAttribute="leading" secondItem="xX5-LZ-ODZ" secondAttribute="leading" constant="15" id="aal-rw-eEP"/>
                                                         <constraint firstAttribute="trailing" secondItem="r1Z-i5-HVk" secondAttribute="trailing" constant="5" id="f8h-NN-wcK"/>
+                                                        <constraint firstItem="KS9-3h-J0h" firstAttribute="leading" secondItem="xX5-LZ-ODZ" secondAttribute="leading" id="h1N-vE-Ibu"/>
                                                         <constraint firstItem="KXe-Bs-taP" firstAttribute="centerY" secondItem="xX5-LZ-ODZ" secondAttribute="centerY" id="iyC-r7-zV3"/>
+                                                        <constraint firstItem="KS9-3h-J0h" firstAttribute="top" secondItem="xX5-LZ-ODZ" secondAttribute="top" id="qTl-Au-DAu"/>
                                                         <constraint firstItem="r1Z-i5-HVk" firstAttribute="top" secondItem="xX5-LZ-ODZ" secondAttribute="top" id="tbm-Nb-Vtv"/>
                                                     </constraints>
                                                 </view>
@@ -155,6 +165,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="xX5-LZ-ODZ" secondAttribute="bottom" id="ynp-In-HWJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="positiveNegativeIndicatorImageView" destination="r1Z-i5-HVk" id="CjS-AU-PZp"/>
+                                            <outlet property="stockNameLabel" destination="VAN-M9-VpY" id="J6H-xt-TFb"/>
+                                            <outlet property="stockPriceLabel" destination="KXe-Bs-taP" id="ACn-Vs-Xbs"/>
+                                            <outlet property="stockTickerLabel" destination="yCR-xb-J3s" id="Ewu-GC-iRM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -278,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzC-eS-mKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="151.57421289355324"/>
+            <point key="canvasLocation" x="-2567" y="-9"/>
         </scene>
         <!--Main-->
         <scene sceneID="KrX-m3-8Jz">
