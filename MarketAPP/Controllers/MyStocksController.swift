@@ -61,7 +61,7 @@ class MyStocksController: UIViewController {
 
 extension MyStocksController: stockSelectedDelegate {
     func stockSelectedPressed(_ stock: Stock) {
-        print(stock.name)
+        self.performSegue(withIdentifier: "toStockAnalyticsSegue", sender: nil)
     }
 }
 
