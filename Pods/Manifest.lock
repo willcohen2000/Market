@@ -48,6 +48,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftKeychainWrapper (3.0.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift
   - SwiftKeychainWrapper
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -70,7 +72,8 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f9294ddb84c7e8d8dbf1c50ff6f929ade3351cc4
+PODFILE CHECKSUM: 15b78ad10e1489f2bede674fcbaf1a36b1c94cec
 
 COCOAPODS: 1.2.1
