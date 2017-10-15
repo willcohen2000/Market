@@ -14,6 +14,7 @@ target 'MarketAPP' do
   pod ‘Firebase/Storage’
   pod ‘SwiftKeychainWrapper’
   pod ’SwiftyJSON’
+  pod ‘Alamofire’
 
   target 'MarketAPPTests' do
     inherit! :search_paths
