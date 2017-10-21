@@ -12,13 +12,27 @@ class Stock {
     
     var name: String!
     var ticker: String!
-    var price: String!
+    var purchasedAt: String!
+    var type: StockType!
     var postKey: String!
     
-    init(name: String, ticker: String, price: String, postKey: String) {
+    enum StockType {
+        case SHORT
+        case LONG
+    }
+    
+    init(name: String, ticker: String, purchasedAt: String, type: StockType, postKey: String) {
         self.name = name
         self.ticker = ticker
-        self.price = price
+        self.purchasedAt = purchasedAt
+        self.type = type
+        self.postKey = postKey
+    }
+    
+    init(name: String, ticker: String, purchasedAt: String, postKey: String) {
+        self.name = name
+        self.ticker = ticker
+        self.purchasedAt = purchasedAt
         self.postKey = postKey
     }
     
@@ -31,8 +45,15 @@ class Stock {
         if let ticker = postData["ticker"] as? String {
             self.ticker = ticker
         }
-        if let price = postData["price"] as? String {
-            self.price = price
+        if let purchasedAt = postData["purchased"] as? String {
+            self.purchasedAt = purchasedAt
+        }
+        if let type = postData["type"] as? String {
+            if (type == "short") {
+                self.type = StockType.SHORT
+            } else {
+                self.type = StockType.LONG
+            }
         }
         
     }

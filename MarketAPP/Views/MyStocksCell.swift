@@ -21,12 +21,18 @@ class MyStocksCell: UITableViewCell {
 
     var delegate: stockSelectedDelegate?
     
+    func populateCell(stock: Stock) {
+        stockPriceLabel.text = "700"
+        stockNameLabel.text = stock.name
+        stockTickerLabel.text = stock.ticker
+    }
+    
     @IBAction func stockSelected(_ sender: Any) {
         guard let stockPrice = stockPriceLabel.text else { return }
         guard let stockName = stockNameLabel.text else { return }
         guard let stockTicker = stockTickerLabel.text else { return }
         if let delegate = delegate {
-            delegate.stockSelectedPressed(Stock(name: stockName, ticker: stockTicker, price: stockPrice, postKey: ""))
+            delegate.stockSelectedPressed(Stock(name: stockName, ticker: stockTicker, purchasedAt: stockPrice, postKey: ""))
         }
     }
     

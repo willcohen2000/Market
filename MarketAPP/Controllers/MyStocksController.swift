@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftKeychainWrapper
+import Firebase
 
 class MyStocksController: UIViewController {
 
@@ -16,12 +17,44 @@ class MyStocksController: UIViewController {
     @IBOutlet weak var longStocksSelectedImageView: UIImageView!
     @IBOutlet weak var myStocksTableView: UITableView!
     
+    var userStocks = [Stock]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myStocksTableView.delegate = self
         myStocksTableView.dataSource = self
         longStocksSelectedImageView.alpha = 0.0
         shortStocksSelectedImageView.alpha = 0.0
+        pullUserStocks(userUID: (Auth.auth().currentUser?.uid)!) { (pulledStocks) in
+            if let pulledStocks = pulledStocks {
+                self.userStocks = pulledStocks
+                if (pulledStocks.count == 0) {
+                    // HANDLE NO STOCKS ADDED YET
+                } else {
+                    self.myStocksTableView.reloadData()
+                }
+            } else {
+                // Handle error if unable to parse alpha vantage data
+            }
+        }
+    }
+    
+    private func pullUserStocks(userUID: String, completionHandler: @escaping (_ stocks: [Stock]?) -> Void) {
+        let userReference = Database.database().reference().child("Stocks").child(userUID)
+        var pulledStocks = [Stock]()
+        userReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        pulledStocks.append(Stock(postkey: snap.key, postData: postDict))
+                    }
+                }
+            }
+            completionHandler(pulledStocks)
+        }) { (error) in
+            completionHandler(nil)
+        }
+        
     }
     
     @IBAction func allStockTypeButtonPressed(_ sender: Any) {
@@ -72,14 +105,15 @@ extension MyStocksController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return userStocks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let stock = optionsArr[indexPath.row]
+        let stock = userStocks[indexPath.row]
         if let stockCell = myStocksTableView.dequeueReusableCell(withIdentifier: "stockCell") as? MyStocksCell {
             stockCell.delegate = self
             stockCell.backgroundColor = UIColor.clear
+            stockCell.populateCell(stock: stock)
             return stockCell
         } else {
             return MyStocksCell()

@@ -75,7 +75,7 @@ class StockAnalyticsController: UIViewController {
     private func getDayOfTrade(date: String) -> String {
         var i = 0
         var abridgedDay: String = ""
-        for (character) in date {
+        for (character) in date.characters {
             if (i == 10) {
                 break;
             } else {
