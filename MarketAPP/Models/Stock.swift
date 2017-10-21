@@ -13,15 +13,10 @@ class Stock {
     var name: String!
     var ticker: String!
     var purchasedAt: String!
-    var type: StockType!
+    var type: MyStocksController.StockClassificationSelected!
     var postKey: String!
     
-    enum StockType {
-        case SHORT
-        case LONG
-    }
-    
-    init(name: String, ticker: String, purchasedAt: String, type: StockType, postKey: String) {
+    init(name: String, ticker: String, purchasedAt: String, type: MyStocksController.StockClassificationSelected, postKey: String) {
         self.name = name
         self.ticker = ticker
         self.purchasedAt = purchasedAt
@@ -50,9 +45,9 @@ class Stock {
         }
         if let type = postData["type"] as? String {
             if (type == "short") {
-                self.type = StockType.SHORT
+                self.type = MyStocksController.StockClassificationSelected.SHORT
             } else {
-                self.type = StockType.LONG
+                self.type = MyStocksController.StockClassificationSelected.LONG
             }
         }
         

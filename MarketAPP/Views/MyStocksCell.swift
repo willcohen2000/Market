@@ -21,8 +21,7 @@ class MyStocksCell: UITableViewCell {
 
     var delegate: stockSelectedDelegate?
     
-    func populateCell(stock: Stock) {
-        stockPriceLabel.text = "700"
+    func populateCell(stock: Stock, selectedType: MyStocksController.StockClassificationSelected) {
         stockNameLabel.text = stock.name
         stockTickerLabel.text = stock.ticker
     }

@@ -18,6 +18,14 @@ class MyStocksController: UIViewController {
     @IBOutlet weak var myStocksTableView: UITableView!
     
     var userStocks = [Stock]()
+    var selectedTypeStocks = [Stock]()
+    var selectedStockType: StockClassificationSelected = .ALL
+    
+    enum StockClassificationSelected {
+        case SHORT
+        case LONG
+        case ALL
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +39,26 @@ class MyStocksController: UIViewController {
                 if (pulledStocks.count == 0) {
                     // HANDLE NO STOCKS ADDED YET
                 } else {
-                    self.myStocksTableView.reloadData()
+                    self.checkForStockType()
                 }
             } else {
                 // Handle error if unable to parse alpha vantage data
             }
         }
+    }
+    
+    private func checkForStockType() {
+        selectedTypeStocks.removeAll()
+        for (stock) in userStocks {
+            if (selectedStockType == .ALL) {
+                selectedTypeStocks.append(stock)
+            } else {
+                if (stock.type == selectedStockType) {
+                    selectedTypeStocks.append(stock)
+                }
+            }
+        }
+        myStocksTableView.reloadData()
     }
     
     private func pullUserStocks(userUID: String, completionHandler: @escaping (_ stocks: [Stock]?) -> Void) {
@@ -61,18 +83,24 @@ class MyStocksController: UIViewController {
         longStocksSelectedImageView.alpha = 0.0
         shortStocksSelectedImageView.alpha = 0
         allStocksSelectedImageView.alpha = 100.0
+        selectedStockType = StockClassificationSelected.ALL
+        checkForStockType()
     }
     
     @IBAction func shortStockTypeButtonPressed(_ sender: Any) {
         longStocksSelectedImageView.alpha = 0.0
         shortStocksSelectedImageView.alpha = 100.0
         allStocksSelectedImageView.alpha = 0.0
+        selectedStockType = StockClassificationSelected.SHORT
+        checkForStockType()
     }
     
     @IBAction func longStockTypeButtonPressed(_ sender: Any) {
         longStocksSelectedImageView.alpha = 100.0
         shortStocksSelectedImageView.alpha = 0.0
         allStocksSelectedImageView.alpha = 0.0
+        selectedStockType = StockClassificationSelected.LONG
+        checkForStockType()
     }
     
     @IBAction func addNewStockButtonPressed(_ sender: Any) {
@@ -105,15 +133,15 @@ extension MyStocksController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userStocks.count
+        return selectedTypeStocks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let stock = userStocks[indexPath.row]
+        let stock = selectedTypeStocks[indexPath.row]
         if let stockCell = myStocksTableView.dequeueReusableCell(withIdentifier: "stockCell") as? MyStocksCell {
             stockCell.delegate = self
             stockCell.backgroundColor = UIColor.clear
-            stockCell.populateCell(stock: stock)
+            stockCell.populateCell(stock: stock, selectedType: selectedStockType)
             return stockCell
         } else {
             return MyStocksCell()
