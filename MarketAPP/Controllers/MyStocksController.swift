@@ -9,6 +9,8 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
+import Alamofire
+import SwiftyJSON
 
 class MyStocksController: UIViewController {
 
@@ -39,7 +41,20 @@ class MyStocksController: UIViewController {
                 if (pulledStocks.count == 0) {
                     // HANDLE NO STOCKS ADDED YET
                 } else {
-                    self.checkForStockType()
+                    var stockPrices: [String] = []
+                    for (stock) in pulledStocks {
+                        self.getCurrentStockPrice(ticker: stock.ticker, currentPriceCompletionHandler: { (currentPrice) in
+                            if let currentPrice = currentPrice {
+                                stock.currentPrice = currentPrice
+                                stockPrices.append(currentPrice)
+                                if (stockPrices.count == pulledStocks.count) {
+                                    self.checkForStockType()
+                                }
+                            } else {
+                                // handle
+                            }
+                        })
+                    }
                 }
             } else {
                 // Handle error if unable to parse alpha vantage data
@@ -68,7 +83,8 @@ class MyStocksController: UIViewController {
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
-                        pulledStocks.append(Stock(postkey: snap.key, postData: postDict))
+                        let stock = Stock(postkey: snap.key, postData: postDict)
+                        pulledStocks.append(stock)
                     }
                 }
             }
@@ -76,7 +92,25 @@ class MyStocksController: UIViewController {
         }) { (error) in
             completionHandler(nil)
         }
-        
+    }
+    
+    private func getCurrentStockPrice(ticker: String, currentPriceCompletionHandler: @escaping (_ stockPrice: String?) -> Void) {
+        let stockAnalyticsJSONUrl: String = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=\(ticker)&interval=1min&outputsize=compact&apikey=80URCYB65S5YLJKI"
+        Alamofire.request(URL(string: stockAnalyticsJSONUrl)!, method: .get).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let stockAnalyticJSON = JSON(value)["Time Series (1min)"]
+                var stockPricesArray: [JSON] = []
+                for (stockInfoAtTime):(String, JSON) in stockAnalyticJSON {
+                    stockPricesArray.append(stockInfoAtTime.1)
+                }
+                if let currentPrice = Float(stockPricesArray[0]["4. close"].stringValue) {
+                    currentPriceCompletionHandler(String(format: "%.2f", currentPrice))
+                }
+            case .failure( _):
+                currentPriceCompletionHandler(nil)
+            }
+        }
     }
     
     @IBAction func allStockTypeButtonPressed(_ sender: Any) {
